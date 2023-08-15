@@ -1,0 +1,10 @@
+.movieInformation {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 3px solid rgb(100, 100, 100, 30%);
+}
+.infoAboutMovie {
+  display: flex;
+  flex-direction: column;
+}

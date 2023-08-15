@@ -1,0 +1,5 @@
+.ListOfMovies li {
+  display: block;
+  padding: 5px;
+  border-bottom: 1px solid rgb(100, 100, 100, 10%);
+}

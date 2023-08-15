@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <h1>Trending today</h1>
+      <h1 style={{ padding: 10 }}>Trending today</h1>
       <ListOfMovies movies={trending} />
     </div>
   );

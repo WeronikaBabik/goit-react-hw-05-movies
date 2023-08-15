@@ -1,5 +1,6 @@
 import { getMovieDetails } from 'components/Api/Api';
 import MovieInformation from 'components/MovieInformation/MovieInformation';
+import css from './MovieDetails.module.css';
 
 const { Suspense, useState, useEffect } = require('react');
 const {
@@ -29,10 +30,13 @@ const MovieDetails = () => {
   }, [movieId]);
 
   const { title, poster_path, vote_average, overview, genres } = details;
-
+  const isActiveLink = ({ isActive }) =>
+    isActive ? css['active'] : css['link'];
   return (
     <div>
-      <Link to={backLink}>Back to movies</Link>
+      <Link to={backLink} className={css.back}>
+        Go back
+      </Link>
       <div>
         <MovieInformation
           posterPath={
@@ -51,12 +55,12 @@ const MovieDetails = () => {
         />
       </div>
       <div>
-        <p>Additional information</p>
-        <nav>
-          <NavLink state={location.state} to="cast">
+        <p style={{ padding: 10 }}>Additional information</p>
+        <nav className={css.navCastAndReviews}>
+          <NavLink state={location.state} to="cast" className={isActiveLink}>
             Cast
           </NavLink>
-          <NavLink state={location.state} to="reviews">
+          <NavLink state={location.state} to="reviews" className={isActiveLink}>
             Reviews
           </NavLink>
         </nav>
