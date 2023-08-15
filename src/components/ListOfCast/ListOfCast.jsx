@@ -1,11 +1,12 @@
 import { PropTypes } from 'prop-types';
+import css from './ListOfCast.module.css';
 
 const ListOfCast = ({ casts }) => {
   return (
     <div>
       <ul>
         {casts.map(({ profile_path, name, character, id }) => (
-          <li key={id}>
+          <li key={id} className={css.actor}>
             <img
               src={
                 profile_path
@@ -16,7 +17,7 @@ const ListOfCast = ({ casts }) => {
               width="342"
               height="513"
             ></img>
-            <p>{name}</p>
+            <h2>{name}</h2>
             <p>Character: {character}</p>
           </li>
         ))}
