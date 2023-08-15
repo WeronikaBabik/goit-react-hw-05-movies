@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/680.1339f028.chunk.css","mappings":"AAAA,yBACE,yCAAgD,CAChD,YACF","sources":["components/ListOfCast/ListOfCast.module.css"],"sourcesContent":[".actor {\n  border-bottom: 1px solid rgb(100, 100, 100, 30%);\n  padding: 10px;\n}\n"],"names":[],"sourceRoot":""}
