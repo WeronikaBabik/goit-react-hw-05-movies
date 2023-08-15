@@ -6,7 +6,7 @@ const SharedLayout = () => {
   const isActiveLink = ({ isActive }) =>
     isActive ? css['active'] : css['link'];
   return (
-    <div>
+    <div className={css.container}>
       <nav className={css.nav}>
         <NavLink to="/" className={isActiveLink}>
           Home

@@ -23,5 +23,3 @@ export const App = () => {
     </Routes>
   );
 };
-
-//S-Boychuk
